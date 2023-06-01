@@ -23,7 +23,7 @@ const createNewEmployee = async (req, res) => {
     res.status(201).json(result)
    
   }catch(err){
-    console.log(err)
+     console.log(err)
   }
 };
 
@@ -49,7 +49,7 @@ const deleteEmployee = async(req, res) => {
     return res.status(204).json({'message': `No employee matches ID ${req.body.id}`})
   }
   const result = await employee.deleteOne({_id: req.body.id})
-  res.json(data.employee);
+  res.json(result);
 };
 
 const getEmployee = async (req, res) => {
